@@ -1,0 +1,102 @@
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-to-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-to-right {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes spin-in {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin-out {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-and-fade-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+
+@keyframes slide-and-fade-to-left {
+  to {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes slide-and-fade-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+}
+
+@keyframes slide-and-fade-to-right {
+  to {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+}
+
+
+::view-transition-new(root) {
+  animation: 500ms ease-out both slide-and-fade-from-right;
+}
+
+::view-transition-old(root) {
+  animation: 500ms ease-out both slide-and-fade-to-left;
+}
+
+[data-bt=true]::view-transition-new(root) {
+  animation-name: slide-and-fade-from-left;
+}
+
+[data-bt=true]::view-transition-old(root) {
+  animation-name: slide-and-fade-to-right;
+}
+
+nav {
+  view-transition-name: nav;
+}

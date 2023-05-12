@@ -1,0 +1,15 @@
+{
+  "name": "100523",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "wds --node-resolve --watch --open"
+  },  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.2.1"
+  }
+}
